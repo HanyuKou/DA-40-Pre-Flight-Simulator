@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class DA40 : Aircraft
 {
-    [Header("Landing Gear")]
-    [SerializeField] private Aircraft_Part FrontLandingGear; // Fault index: 0
-    [SerializeField] private Aircraft_Part RightLandingGear; // Fault index: 1
-    [SerializeField] private Aircraft_Part LeftLandingGear; // Fault index: 2
+    //[Header("Landing Gear")]
+    //[SerializeField] private Aircraft_Part FrontLandingGear; // Fault index: 0
+    //[SerializeField] private Aircraft_Part RightLandingGear; // Fault index: 1
+    //[SerializeField] private Aircraft_Part LeftLandingGear; // Fault index: 2
 
     [Header("Steps")]
     [SerializeField] private Aircraft_Part RightStep; // Fault index: 3
@@ -68,30 +68,30 @@ public class DA40 : Aircraft
     // Start is called before the first frame update.
     void Start()
     {
-        parts = new Aircraft_Part[23];
-        parts[0] = FrontLandingGear;
-        parts[1] = RightLandingGear;
-        parts[2] = LeftLandingGear;
-        parts[3] = RightStep;
-        parts[4] = LeftStep;
-        parts[5] = Propeller;
-        parts[6] = Fuselage;
-        parts[7] = Antenna;
-        parts[8] = RightWing;
-        parts[9] = LeftWing;
-        parts[10] = RightAileron;
-        parts[11] = LeftAileron;
-        parts[12] = RightBreakFlap;
-        parts[13] = LeftBreakFlap;
-        parts[14] = LiftFlap;
-        parts[15] = Rudder;
-        parts[16] = LandingLight;
-        parts[17] = RightTrafficLight;
-        parts[18] = LeftTrafficLight;
-        parts[19] = RightStrobeLight;
-        parts[20] = LeftStrobeLight;
-        parts[21] = StallWarning;
-        parts[22] = Pitot;
+        parts = new Aircraft_Part[20];
+        //parts[0] = FrontLandingGear;
+        //parts[1] = RightLandingGear;
+        //parts[2] = LeftLandingGear;
+        parts[0] = RightStep;
+        parts[1] = LeftStep;
+        parts[2] = Propeller;
+        parts[3] = Fuselage;
+        parts[4] = Antenna;
+        parts[5] = RightWing;
+        parts[6] = LeftWing;
+        parts[7] = RightAileron;
+        parts[8] = LeftAileron;
+        parts[9] = RightBreakFlap;
+        parts[10] = LeftBreakFlap;
+        parts[11] = LiftFlap;
+        parts[12] = Rudder;
+        parts[13] = LandingLight;
+        parts[14] = RightTrafficLight;
+        parts[15] = LeftTrafficLight;
+        parts[16] = RightStrobeLight;
+        parts[17] = LeftStrobeLight;
+        parts[18] = StallWarning;
+        parts[19] = Pitot;
         // parts[23] = FuselageFuelCap;
         // parts[24] = WingFuelCap;
     }
