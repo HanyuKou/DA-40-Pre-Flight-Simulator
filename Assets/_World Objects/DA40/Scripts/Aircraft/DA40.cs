@@ -63,12 +63,13 @@ public class DA40 : Aircraft
     [SerializeField] private Aircraft_Part FuselageFuelCap; // Fault index: 23
     [SerializeField] private Aircraft_Part WingFuelCap; // Fault index: 24
 
-
+    [Header("Brake System")]
+    [SerializeField] private Aircraft_Part BrakeFluidLeakModel;
 
     // Start is called before the first frame update.
     void Start()
     {
-        parts = new Aircraft_Part[20];
+        parts = new Aircraft_Part[21];
         //parts[0] = FrontLandingGear;
         //parts[1] = RightLandingGear;
         //parts[2] = LeftLandingGear;
@@ -94,5 +95,10 @@ public class DA40 : Aircraft
         parts[19] = Pitot;
         // parts[23] = FuselageFuelCap;
         // parts[24] = WingFuelCap;
+        parts[20] = BrakeFluidLeakModel;
+
+        Aircraft_Part BrakeFault = GetPart(20);
+        BrakeFluidLeak brakeFluidLeak = BrakeFault.gameObject.AddComponent<BrakeFluidLeak>();
+        brakeFluidLeak.brakeFluidModel = BrakeFault.gameObject;
     }
 }

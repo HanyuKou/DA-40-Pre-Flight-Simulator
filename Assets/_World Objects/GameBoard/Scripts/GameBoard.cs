@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-
 public class GameBoard : MonoBehaviour
 {
     [Header("Simulated Aircraft")]
@@ -26,12 +25,10 @@ public class GameBoard : MonoBehaviour
         Challenge,
         Hunt
     }
+
     private simulationModes activeMode;
     private int focusedSimulationTab;
     private bool activeSimulation;
-
-
-
     // Navigates the board’s main tabs to a specified tab.
     public void SwitchBoardTab(int activeTab)
     {
