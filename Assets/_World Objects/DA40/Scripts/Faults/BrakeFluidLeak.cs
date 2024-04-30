@@ -5,21 +5,21 @@ using UnityEngine;
 public class BrakeFluidLeak : Visual_Fault
 {
     [Header("Brake Fluid Leak Parameters")]
-    [SerializeField] public GameObject brakeFluidModel;
+    [SerializeField] private GameObject brakeFluid;
 
     public override void GenerateFault()
     {
         base.GenerateFault();
-        // Activate the brake fluid model and particle system
-        brakeFluidModel.SetActive(true);
+        // Activate the brake fluid and particle system
+        brakeFluid.SetActive(true);
 
     }
 
     public override void RemoveFault()
     {
         base.RemoveFault();
-        // Stop the particle system and deactivate the brake fluid model
-        brakeFluidModel.SetActive(false);
+        // Stop the particle system and deactivate the brake fluid
+        brakeFluid.SetActive(false);
     }
 
 }

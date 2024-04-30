@@ -130,6 +130,17 @@ public class GameBoard : MonoBehaviour
                 simulationTabs[6].transform.localPosition = new Vector3(0, 0, 0);
                 simulationTabs[7].SetActive(true);
                 simulationTabs[7].transform.localPosition = new Vector3(55, 0, 0);
+                
+                break;
+
+            case (7):
+                focusedSimulationTab = 7;
+                simulationTabs[6].SetActive(true);
+                simulationTabs[6].transform.localPosition = new Vector3(-55, 0, 0);
+                simulationTabs[7].SetActive(true);
+                simulationTabs[7].transform.localPosition = new Vector3(0, 0, 0);
+                simulationTabs[8].SetActive(true);
+                simulationTabs[8].transform.localPosition = new Vector3(55, 0, 0);
                 simulationNavNext.SetActive(false);
                 break;
         }

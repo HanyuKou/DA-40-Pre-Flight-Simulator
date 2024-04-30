@@ -96,9 +96,5 @@ public class DA40 : Aircraft
         // parts[23] = FuselageFuelCap;
         // parts[24] = WingFuelCap;
         parts[20] = BrakeFluidLeakModel;
-
-        Aircraft_Part BrakeFault = GetPart(20);
-        BrakeFluidLeak brakeFluidLeak = BrakeFault.gameObject.AddComponent<BrakeFluidLeak>();
-        brakeFluidLeak.brakeFluidModel = BrakeFault.gameObject;
     }
 }
