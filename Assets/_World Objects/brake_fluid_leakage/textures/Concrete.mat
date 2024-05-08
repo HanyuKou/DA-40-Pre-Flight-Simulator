@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: brake_fluid_leak
+  m_Name: Concrete
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -30,7 +30,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
-        m_Texture: {fileID: 2800000, guid: 0f9bf496117692945bb53c06e9021c55, type: 3}
+        m_Texture: {fileID: 2800000, guid: ca876533ec868c548ae988fd9ef692ba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
@@ -43,11 +43,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 377e344dbf801254188d7f3546840689, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: be5875a1f18d57b4caa0500094cb33b5, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -84,10 +84,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-<<<<<<< Updated upstream:Assets/_World Objects/brake_fluid_leakage/textures/brake_fluid_leak.mat
-    - _Color: {r: 0.86415094, g: 0.86415094, b: 0.86415094, a: 1}
-=======
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
->>>>>>> Stashed changes:Assets/_World Objects/DA40/brake_fluid_leakage/textures/brake_fluid_leak.mat
+    - _Color: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
