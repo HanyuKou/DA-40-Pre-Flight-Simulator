@@ -141,8 +141,21 @@ public class GameBoard : MonoBehaviour
                 simulationTabs[7].transform.localPosition = new Vector3(0, 0, 0);
                 simulationTabs[8].SetActive(true);
                 simulationTabs[8].transform.localPosition = new Vector3(55, 0, 0);
+                simulationTabs[9].SetActive(true);
+                simulationTabs[9].transform.localPosition = new Vector3(55, -20, 0);
                 simulationNavNext.SetActive(false);
                 break;
+
+            //case (8):
+            //    focusedSimulationTab = 8;
+            //    simulationTabs[7].SetActive(true);
+            //    simulationTabs[7].transform.localPosition = new Vector3(-55, 0, 0);
+            //    simulationTabs[8].SetActive(true);
+            //    simulationTabs[8].transform.localPosition = new Vector3(0, 0, 0);
+            //    simulationTabs[9].SetActive(true);
+            //    simulationTabs[9].transform.localPosition = new Vector3(0, -20, 0);
+            //    simulationNavNext.SetActive(false);
+            //    break;
         }
     }
 

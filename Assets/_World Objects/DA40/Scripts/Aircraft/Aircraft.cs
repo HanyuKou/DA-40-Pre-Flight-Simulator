@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -37,15 +38,17 @@ public class Aircraft : MonoBehaviour
         }
         return sum;
     }
-
-
-
+    
     // Loads the fault state in all parts based on predefined states.
     public void RunPractiseScenario()
     {
-
+        Debug.Log("Practise Scenario Loaded!!!!!!");
+        for (int part = 0; part < parts.Length; part++)
+        {
+            parts[part].GenerateFaults();
+        }
     }
-
+    
 
 
     // Potentially sets a fault to malfunctioning in every aircraft part, based on their weighting.
