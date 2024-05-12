@@ -3,7 +3,13 @@ guid: 7a1e9cfd77eb1164992a172cb0ba1ffc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - aircraft: {instanceID: 0}
+  - simulationTabHeader: {instanceID: 0}
+  - simulationNavNext: {instanceID: 0}
+  - simulationNavPrev: {instanceID: 0}
+  - inputActions: {fileID: -944628639613478452, guid: 79e74604db8bc5e4ab8d890d04d0fa6f,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

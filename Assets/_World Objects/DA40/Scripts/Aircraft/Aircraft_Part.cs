@@ -10,7 +10,6 @@ public class Aircraft_Part : MonoBehaviour
     [SerializeField] private Fault[] faults;
 
 
-
     // Returns how many potential faults the part has.
     public int NumberOfFaults()
     {

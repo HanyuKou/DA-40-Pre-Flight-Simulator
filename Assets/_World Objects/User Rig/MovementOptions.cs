@@ -18,17 +18,20 @@ public class MovementOptions : MonoBehaviour
 
     public void ToggleTeleportMovement()
     {
+        Debug.Log("isTeleportMovement:" + isTeleportMovement);
         if (!isTeleportMovement)
         {
             GetComponent<TeleportationProvider>().enabled = true;
             teleportationPointer[0].SetActive(true);
             teleportationPointer[1].SetActive(true);
+            isTeleportMovement = true;
         }
         else
         {
             GetComponent<TeleportationProvider>().enabled = false;
             teleportationPointer[0].SetActive(false);
             teleportationPointer[1].SetActive(false);
+            isTeleportMovement = false;
         }
     }
 
@@ -39,10 +42,12 @@ public class MovementOptions : MonoBehaviour
         if (!isContinuousMovement)
         {
             GetComponent<ActionBasedContinuousMoveProvider>().enabled = true;
+            isContinuousMovement = true;
         }
         else
         {
             GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
+            isContinuousMovement = false;
         }
     }
 
@@ -53,10 +58,12 @@ public class MovementOptions : MonoBehaviour
         if (!isContinuousTurn)
         {
             GetComponent<ActionBasedContinuousTurnProvider>().enabled = true;
+            isContinuousTurn = true;
         }
         else
         {
             GetComponent<ActionBasedContinuousTurnProvider>().enabled = false;
+            isContinuousTurn = false;
         }
     }
 
@@ -67,10 +74,12 @@ public class MovementOptions : MonoBehaviour
         if (!isSnapTurn)
         {
             GetComponent<ActionBasedSnapTurnProvider>().enabled = true;
+            isSnapTurn = true;
         }
         else
         {
             GetComponent<ActionBasedSnapTurnProvider>().enabled = false;
+            isSnapTurn = false;
         }
     }
 }
