@@ -1,26 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
-
-
-public class HapticFeedback : MonoBehaviour
+public class HapticFeedbackHigh : MonoBehaviour
 {
     private float intensity;
     private float duration;
 
     private void Start()
     {
-       
+
     }
 
 
     // Sends haptic command to the corrosponding controller.
     private void TriggerHaptic(XRBaseController controller)
     {
-        controller.SendHapticImpulse(0.1f, 1f);
+        controller.SendHapticImpulse(0.9f, 1f);
     }
 
 

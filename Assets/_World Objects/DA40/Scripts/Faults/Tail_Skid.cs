@@ -5,18 +5,21 @@ using UnityEngine;
 public class Tail_Skid : Visual_Fault
 {
     [Header("Tail Skid Parameters")]
-    [SerializeField] private GameObject tailSkid;
+    [SerializeField] private GameObject tailSkidLow;
+    [SerializeField] private GameObject tailSkidHigh;
 
     public override void GenerateFault()
     {
         base.GenerateFault();
-        tailSkid.SetActive(true);
+        tailSkidHigh.SetActive(true);
+        tailSkidLow.SetActive(false);
 
     }
 
     public override void RemoveFault()
     {
         base.RemoveFault();
-        tailSkid.SetActive(false);
+        tailSkidHigh.SetActive(false);
+        tailSkidLow.SetActive(true);
     }
 }

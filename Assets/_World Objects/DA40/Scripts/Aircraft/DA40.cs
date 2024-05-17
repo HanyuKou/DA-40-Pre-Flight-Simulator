@@ -69,10 +69,19 @@ public class DA40 : Aircraft
     [Header("Tail Skid")]
     [SerializeField] private Aircraft_Part TailSkid;
 
+    [Header("Rim Front")]
+    [SerializeField] private Aircraft_Part RimFront;
+
+    [Header("Rim Right")]
+    [SerializeField] private Aircraft_Part RimRight;
+
+    [Header("Rim Left")]
+    [SerializeField] private Aircraft_Part RimLeft;
+
     // Start is called before the first frame update.
     void Start()
     {
-        parts = new Aircraft_Part[22];
+        parts = new Aircraft_Part[25];
         //parts[0] = FrontLandingGear;
         //parts[1] = RightLandingGear;
         //parts[2] = LeftLandingGear;
@@ -100,5 +109,8 @@ public class DA40 : Aircraft
         // parts[24] = WingFuelCap;
         parts[20] = BrakeFluidLeakModel;
         parts[21] = TailSkid;
+        parts[22] = RimFront;
+        parts[23] = RimRight;
+        parts[24] = RimLeft;
     }
 }
