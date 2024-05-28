@@ -78,6 +78,7 @@ public class DA40 : Aircraft
     [Header("Rim Left")]
     [SerializeField] private Aircraft_Part RimLeft;
 
+
     // Start is called before the first frame update.
     void Start()
     {
@@ -112,5 +113,6 @@ public class DA40 : Aircraft
         parts[22] = RimFront;
         parts[23] = RimRight;
         parts[24] = RimLeft;
+        //parts[25] = BrakePropellorModel;
     }
 }

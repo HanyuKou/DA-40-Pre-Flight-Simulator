@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rim_Front : Visual_Fault
 {
-    [Header("Tail Skid Parameters")]
+    [Header("Front Rim Parameters")]
     [SerializeField] private GameObject RimUndamaged;
     [SerializeField] private GameObject RimDamaged;
 
