@@ -770,7 +770,7 @@ PrefabInstance:
     - target: {fileID: 8782257265333183968, guid: f865c1ef6546ac849b500257db2f6e7e,
         type: 3}
       propertyPath: m_Name
-      value: Lunzi(Front)
+      value: Broken Rim(Front)
       objectReference: {fileID: 0}
     - target: {fileID: 8782257265333183968, guid: f865c1ef6546ac849b500257db2f6e7e,
         type: 3}
@@ -802,7 +802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 306763714}
   m_Layer: 5
-  m_Name: Rim (Right)
+  m_Name: Rim/Tyre (Right)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,7 +1708,7 @@ PrefabInstance:
     - target: {fileID: 8782257265333183968, guid: f865c1ef6546ac849b500257db2f6e7e,
         type: 3}
       propertyPath: m_Name
-      value: Lunzi (Left)
+      value: Broken Rim (Left)
       objectReference: {fileID: 0}
     - target: {fileID: 8782257265333183968, guid: f865c1ef6546ac849b500257db2f6e7e,
         type: 3}
@@ -4332,7 +4332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Front Rim
+  m_Text: Front Rim/Tyre
 --- !u!222 &1019044771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8772,7 +8772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404524053}
   m_Layer: 5
-  m_Name: Rim (Left)
+  m_Name: Rim/Tyre (Left)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9407,7 +9407,7 @@ PrefabInstance:
     - target: {fileID: 5246037530454612028, guid: 7be3847fd0b7edf4a98f47ecf7d300a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.034
+      value: -0.018
       objectReference: {fileID: 0}
     - target: {fileID: 5246037530454612028, guid: 7be3847fd0b7edf4a98f47ecf7d300a4,
         type: 3}
@@ -10063,7 +10063,7 @@ PrefabInstance:
     - target: {fileID: 8782257265333183968, guid: f865c1ef6546ac849b500257db2f6e7e,
         type: 3}
       propertyPath: m_Name
-      value: Lunzi (Right)
+      value: Broken Rim(Right)
       objectReference: {fileID: 0}
     - target: {fileID: 8782257265333183968, guid: f865c1ef6546ac849b500257db2f6e7e,
         type: 3}
@@ -10781,7 +10781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755274519}
   m_Layer: 5
-  m_Name: Rim (Front)
+  m_Name: Rim/Tyre (Front)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10995,7 +10995,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Right Rim
+  m_Text: Right Rim/Tyre
 --- !u!222 &1760621243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11090,7 +11090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Left Rim
+  m_Text: Left Rim/Tyre
 --- !u!222 &1762188224
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13058,6 +13058,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 388426624579293466, guid: 89592258676eeb841958f81bfbf13efe,
+        type: 3}
+      propertyPath: m_Text
+      value: Nav Light (Right)
+      objectReference: {fileID: 0}
     - target: {fileID: 597208883608818193, guid: 89592258676eeb841958f81bfbf13efe,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -13368,6 +13373,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2541361707953699431, guid: 89592258676eeb841958f81bfbf13efe,
+        type: 3}
+      propertyPath: m_Text
+      value: Step (Left)
+      objectReference: {fileID: 0}
     - target: {fileID: 2560746586553946603, guid: 89592258676eeb841958f81bfbf13efe,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -13487,6 +13497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992079457669802192, guid: 89592258676eeb841958f81bfbf13efe,
+        type: 3}
+      propertyPath: m_Text
+      value: Elevator Flap
       objectReference: {fileID: 0}
     - target: {fileID: 3154921086495717012, guid: 89592258676eeb841958f81bfbf13efe,
         type: 3}
@@ -13612,6 +13627,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699036867246757486, guid: 89592258676eeb841958f81bfbf13efe,
+        type: 3}
+      propertyPath: m_Text
+      value: Step (Right)
       objectReference: {fileID: 0}
     - target: {fileID: 4870359093271919637, guid: 89592258676eeb841958f81bfbf13efe,
         type: 3}
@@ -13848,6 +13868,16 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6458110604545475609, guid: 89592258676eeb841958f81bfbf13efe,
+        type: 3}
+      propertyPath: m_Text
+      value: Rudder
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477132349376840367, guid: 89592258676eeb841958f81bfbf13efe,
+        type: 3}
+      propertyPath: m_Text
+      value: Flap (Right)
+      objectReference: {fileID: 0}
     - target: {fileID: 6546592744188160402, guid: 89592258676eeb841958f81bfbf13efe,
         type: 3}
       propertyPath: m_Mesh
@@ -13963,6 +13993,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6635371217637713525, guid: 89592258676eeb841958f81bfbf13efe,
+        type: 3}
+      propertyPath: m_Text
+      value: Nav Light (Left)
+      objectReference: {fileID: 0}
     - target: {fileID: 6671614715904043367, guid: 89592258676eeb841958f81bfbf13efe,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -14007,6 +14042,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262023100238286575, guid: 89592258676eeb841958f81bfbf13efe,
+        type: 3}
+      propertyPath: m_Text
+      value: Flap (Left)
       objectReference: {fileID: 0}
     - target: {fileID: 7371597662041749040, guid: 89592258676eeb841958f81bfbf13efe,
         type: 3}
