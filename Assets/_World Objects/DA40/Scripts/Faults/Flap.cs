@@ -23,7 +23,7 @@ public class Flap : Interact_Check
     {
         base.StartUp();
 
-        desiredPosition = FlapPositions.Neutral;
+        desiredPosition = FlapPositions.Down;
         neutralRotation = 0f;
         currentRotation = 0f;
     }
@@ -53,7 +53,7 @@ public class Flap : Interact_Check
                 break;
 
             case (FlapPositions.Down):
-                LowerFlap(deltaTime * 8, minimalRotation);
+                LowerFlap(deltaTime * 15, minimalRotation);
                 break;
         }
     }
@@ -65,7 +65,7 @@ public class Flap : Interact_Check
     {
         base.Interact();
 
-        if (!isFaulty)
+        if (isFaulty)
         {
             if (desiredPosition == FlapPositions.Up)
             {
