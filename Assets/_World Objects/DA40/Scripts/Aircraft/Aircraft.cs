@@ -42,10 +42,9 @@ public class Aircraft : MonoBehaviour
     // Loads the fault state in all parts based on predefined states.
     public void RunPractiseScenario()
     {
-        Debug.Log("Practise Scenario Loaded!!!!!!");
         for (int part = 0; part < parts.Length; part++)
         {
-            parts[part].GenerateFaults();
+            parts[part].GenerateFaults(); // Generate faults in all parts.
         }
     }
     

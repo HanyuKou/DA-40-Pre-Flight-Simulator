@@ -31,7 +31,7 @@ public class MovementOptions : MonoBehaviour
             GetComponent<TeleportationProvider>().enabled = false;
             teleportationPointer[0].SetActive(false);
             teleportationPointer[1].SetActive(false);
-            isTeleportMovement = false;
+            isTeleportMovement = false; // Set to false to prevent teleport movement from being still enabled.
         }
     }
 
@@ -47,7 +47,7 @@ public class MovementOptions : MonoBehaviour
         else
         {
             GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
-            isContinuousMovement = false;
+            isContinuousMovement = false; // Set to false to prevent continuous movement from being still enabled.
         }
     }
 
@@ -63,7 +63,7 @@ public class MovementOptions : MonoBehaviour
         else
         {
             GetComponent<ActionBasedContinuousTurnProvider>().enabled = false;
-            isContinuousTurn = false;
+            isContinuousTurn = false; // Set to false to prevent continuous turn from being still enabled.
         }
     }
 

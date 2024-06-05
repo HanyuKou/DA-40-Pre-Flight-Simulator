@@ -138,13 +138,13 @@ public class GameBoard : MonoBehaviour
             case (7):
                 focusedSimulationTab = 7;
                 simulationTabs[7].SetActive(true);
-                simulationTabs[7].transform.localPosition = new Vector3(-55, 0, 0);
+                simulationTabs[7].transform.localPosition = new Vector3(-55, 0, 0); // add another page to the game board to show new faults.
                 simulationTabs[8].SetActive(true);
                 simulationTabs[8].transform.localPosition = new Vector3(-55, -20, 0);
                 simulationTabs[9].SetActive(true);
                 simulationTabs[9].transform.localPosition = new Vector3(0, 0, 0);
 
-                simulationNavNext.SetActive(false);
+                simulationNavNext.SetActive(false); // Disables the next button.
                 break;
 
                 //case (8):

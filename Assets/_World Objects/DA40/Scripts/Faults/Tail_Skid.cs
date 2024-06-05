@@ -11,15 +11,15 @@ public class Tail_Skid : Visual_Fault
     public override void GenerateFault()
     {
         base.GenerateFault();
-        tailSkidHigh.SetActive(true);
-        tailSkidLow.SetActive(false);
+        tailSkidHigh.SetActive(true); // Set the high tail skid vibration to be active.
+        tailSkidLow.SetActive(false); // Set the low tail skid vibration to be inactive.
 
     }
 
     public override void RemoveFault()
     {
         base.RemoveFault();
-        tailSkidHigh.SetActive(false);
-        tailSkidLow.SetActive(true);
+        tailSkidHigh.SetActive(false); // Set the high tail skid vibration to be inactive.
+        tailSkidLow.SetActive(true); // Set the low tail skid vibration to be active.
     }
 }

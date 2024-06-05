@@ -6,10 +6,6 @@ using UnityEngine;
 
 public class DA40 : Aircraft
 {
-    //[Header("Landing Gear")]
-    //[SerializeField] private Aircraft_Part FrontLandingGear; // Fault index: 0
-    //[SerializeField] private Aircraft_Part RightLandingGear; // Fault index: 1
-    //[SerializeField] private Aircraft_Part LeftLandingGear; // Fault index: 2
 
     [Header("Steps")]
     [SerializeField] private Aircraft_Part RightStep; // Fault index: 3
@@ -64,19 +60,19 @@ public class DA40 : Aircraft
     [SerializeField] private Aircraft_Part WingFuelCap; // Fault index: 24
 
     [Header("Brake System")]
-    [SerializeField] private Aircraft_Part BrakeFluidLeakModel;
+    [SerializeField] private Aircraft_Part BrakeFluidLeakModel; // Added for brake system fault.
 
     [Header("Tail Skid")]
-    [SerializeField] private Aircraft_Part TailSkid;
+    [SerializeField] private Aircraft_Part TailSkid; // Added for tail skid fault.
 
     [Header("Rim Front")]
-    [SerializeField] private Aircraft_Part RimFront;
+    [SerializeField] private Aircraft_Part RimFront; // Added for rim front fault.
 
     [Header("Rim Right")]
-    [SerializeField] private Aircraft_Part RimRight;
+    [SerializeField] private Aircraft_Part RimRight; // Added for rim right fault.
 
     [Header("Rim Left")]
-    [SerializeField] private Aircraft_Part RimLeft;
+    [SerializeField] private Aircraft_Part RimLeft; // Added for rim left fault.
 
 
     // Start is called before the first frame update.
