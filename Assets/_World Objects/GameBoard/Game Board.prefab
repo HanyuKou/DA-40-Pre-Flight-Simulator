@@ -14244,8 +14244,6 @@ MonoBehaviour:
   - {fileID: 3498702809933328714}
   - {fileID: 8059212224496140561}
   simulationTabHeader: {fileID: 6816344389371543398}
-  simulationNavNext: {fileID: 9103253911378784198}
-  simulationNavPrev: {fileID: 183268571628611030}
   simulationTabs:
   - {fileID: 4334372188421672662}
   - {fileID: 8656619724291968418}
