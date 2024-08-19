@@ -176,9 +176,9 @@ public class Interface : MonoBehaviour
     public void GetMainMenu()
     {
         // Assume boardDisplays[0] is main menu panel
-        boardDisplays[0].SetActive(true);  // Activate the main menu panel
         boardDisplays[1].SetActive(false); // Deactivate the simulation panel
         boardDisplays[2].SetActive(false); // Deactivate the control panel
+        boardDisplays[0].SetActive(true);  // Activate the main menu panel
     }
 
 
