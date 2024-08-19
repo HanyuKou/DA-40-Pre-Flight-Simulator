@@ -57,21 +57,28 @@ public abstract class Fault : MonoBehaviour
     // Changes the colour of the associated simulation board's display button.
     public void ColourButton()
     {
-        if (isFaulty && isTagged)
+        if (boardDisplay != null)
         {
-            boardDisplay.image.color = Color.green;
-        }
-        else if (!isFaulty && isTagged)
-        {
-            boardDisplay.image.color = Color.yellow;
-        }
-        else if (isFaulty && !isTagged)
-        {
-            boardDisplay.image.color = Color.red;
+            if (isFaulty && isTagged)
+            {
+                boardDisplay.image.color = Color.green;
+            }
+            else if (!isFaulty && isTagged)
+            {
+                boardDisplay.image.color = Color.yellow;
+            }
+            else if (isFaulty && !isTagged)
+            {
+                boardDisplay.image.color = Color.red;
+            }
+            else
+            {
+                boardDisplay.image.color = Color.white;
+            }
         }
         else
         {
-            boardDisplay.image.color = Color.white;
+            Debug.LogError("BoardDisplay is not set on " + gameObject.name);
         }
     }
 
@@ -80,7 +87,14 @@ public abstract class Fault : MonoBehaviour
     // Sets whether the associated simulation board's button can be interacted with.
     public void EnableButton(bool state)
     {
-        boardDisplay.interactable = state;
+        if (boardDisplay != null)
+        {
+            boardDisplay.interactable = state;
+        }
+        else
+        {
+            Debug.LogError("BoardDisplay is not set on " + gameObject.name);
+        }
     }
 
 
@@ -88,12 +102,18 @@ public abstract class Fault : MonoBehaviour
     // Resets all of the associated button's parameters to default.
     public void ResetButton()
     {
-        boardDisplay.isOn = false;
-        isTagged = false;
-        ColourButton();
-        EnableButton(true);
+        if (boardDisplay != null)
+        {
+            boardDisplay.isOn = false;
+            isTagged = false;
+            ColourButton();
+            EnableButton(true);
+        }
+        else
+        {
+            Debug.LogError("BoardDisplay is not set on " + gameObject.name);
+        }
     }
-
 
 
     // Defined getter for retrieving the fault's state.
@@ -119,7 +139,7 @@ public abstract class Fault : MonoBehaviour
 
 
 
-    // Defined getter for retrieving the fault’s tagged state.
+    // Defined getter for retrieving the faultï¿½s tagged state.
     public bool IsTagged()
     {
         return isTagged;

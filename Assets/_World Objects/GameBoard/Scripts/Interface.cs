@@ -19,25 +19,39 @@ public class Interface : MonoBehaviour
 
     public enum SimulationModes
     {
+        None,
         Practise,
         Challenge,
         Hunt
     }
 
     private SimulationModes activeMode;
-    //private bool activeSimulation = false;
+    private bool isControlsActive = false;  // Track whether the controls panel is currently active
+
+    void Start()
+    {
+        boardDisplays[0]. SetActive(true); //  Main menu panel display
+        boardDisplays[1]. SetActive(false); //  Simulation panel hidden
+        boardDisplays[2]. SetActive(false); //  Control panel hidden
+        
+        // Debug.Log("Main Menu Active: " + boardDisplays[0].activeSelf);
+    }
 
 
     // Starts up a simulation and flicks to the simulation main board tab.
     private void StartSimulation()
     {
-        // activeSimulation = true;
+        // Debug.Log("Simulation started");
         boardTabs[0].SetActive(true); // Submit Button
         boardTabs[1].SetActive(false); // Main Menu Button
         boardTabs[2].SetActive(true); // Simulation Tab Button
 
-        ExitMainMenu();
-        boardDisplays[1].SetActive(true); //simulation panel
+        // Make sure to hide the Main Menu when starting simulation
+        boardDisplays[0].SetActive(false); // Deactivate Main Menu
+        boardDisplays[1].SetActive(true);  // Activate Simulation panel
+        boardDisplays[2].SetActive(false); // Ensure Controls panel is also hidden if not needed
+
+        // Debug.Log("Simulation Panel Active: " + boardDisplays[1].activeSelf);
     }
 
 
@@ -45,12 +59,14 @@ public class Interface : MonoBehaviour
     // Closes a simulation and compiles the user results for display.
     private void EndSimulation()
     {
-        // activeSimulation = false;
+        //Debug.Log("Ending Simulation.");
         boardTabs[0].SetActive(false); // Submit Button
         boardTabs[1].SetActive(true); // Main Menu Button
         boardTabs[2].SetActive(true); // Simulation Tab Button
     
         GetMainMenu();
+
+        //Debug.Log("Returned to Main Menu");
 
         // Sift through each part and it's faults to compare tags with faults states.
         int faultsPresent = 0;
@@ -105,10 +121,13 @@ public class Interface : MonoBehaviour
     // Wipes all faults from the aircraft and resets the simulation board.
     private void ClearSimulation()
     {
-        // activeSimulation = false;
+        //Debug.Log("Clearing Simulation.");
         boardTabs[0].SetActive(false); // Submit Button
         boardTabs[1].SetActive(true); // Main Menu Button
         boardTabs[2].SetActive(false); // Simulation Tab Button
+
+        // Set active mode to None
+        activeMode = SimulationModes.None;
 
         GetMainMenu(); //mainMenu panel
         aircraft.Reset();
@@ -119,10 +138,11 @@ public class Interface : MonoBehaviour
     // Begins a practise mode simulation and loads pre-defined fault states.
     public void InitiatePractise()
     {
-        Debug.Log("Initiating Practice Mode");
+        //Debug.Log("Initiating Practice Mode");
         ClearSimulation();
         activeMode = SimulationModes.Practise;
         simulationTabHeader.text = "Simulation - Practise";
+        //Debug.Log("Practice scenario running.");
         aircraft.RunPractiseScenario();
         StartSimulation();
     }
@@ -132,7 +152,7 @@ public class Interface : MonoBehaviour
     // Begins a challenge mode simulation and randomises the aircraft entirely.
     public void InitiateChallenge()
     {
-        Debug.Log("Initiating Challenge Mode");
+        //Debug.Log("Initiating Challenge Mode");
         ClearSimulation();
         activeMode = SimulationModes.Challenge;
         simulationTabHeader.text = "Simulation - Challenge";
@@ -145,7 +165,7 @@ public class Interface : MonoBehaviour
     // Begins a hunt mode simulation and generates just one fault.
     public void InitiateHunt()
     {
-        Debug.Log("Initiating Hunt Mode");
+        //Debug.Log("Initiating Hunt Mode");
         ClearSimulation();
         activeMode = SimulationModes.Hunt;
         simulationTabHeader.text = "Simulation - Hunt";
@@ -155,37 +175,47 @@ public class Interface : MonoBehaviour
 
     public void GetMainMenu()
     {
-        Debug.Log("Returning to Main Menu");
         // Assume boardDisplays[0] is main menu panel
         boardDisplays[0].SetActive(true);  // Activate the main menu panel
         boardDisplays[1].SetActive(false); // Deactivate the simulation panel
+        boardDisplays[2].SetActive(false); // Deactivate the control panel
     }
 
-    public void ExitMainMenu()
+
+    public void ToggleControls()
     {
-        boardDisplays[0].SetActive(false);  // Deactivate the main menu panel
-    }
+        // Toggle the state of isControlsActive each time the method is called
+        isControlsActive = !isControlsActive;
 
-    public void GetControls()
-    {
-        Debug.Log("Opening Controls");
-        // Assume boardDisplays[2] is controls panel
-        boardDisplays[2].SetActive(true);  // Deactivate the controls panel
-    }
+        // Activate or deactivate the controls panel based on the toggled state
+        boardDisplays[2].SetActive(isControlsActive);
 
-    public void ExitControls()
-    {
-        Debug.Log("Opening Controls");
-        // Assume boardDisplays[2] is controls panel
-        boardDisplays[2].SetActive(false);  // Deactivate the controls panel
-    }
+        if (isControlsActive) 
+        {
+            // When controls are active, hide both the main menu and simulation panels
+            boardDisplays[0].SetActive(false);
+            boardDisplays[1].SetActive(false);
+        } else {
+            // When controls are deactivated, show the current active simulation or main menu
+            if (activeMode != SimulationModes.None)
+            {
+                // If there's an active simulation, reactivate the simulation panel
+                boardDisplays[1].SetActive(true);
+            } else {
+                // If no simulation is active, show the main menu
+                boardDisplays[0].SetActive(true);
+            }
+        }
 
+        // Debug.Log("Controls panel toggled: " + isControlsActive);
+        // Debug.Log("Control panel state: " + boardDisplays[2].activeSelf);
+    }
 
 
     // Ends the simulation and scores the user.
     public void Submit()
     {
-        Debug.Log("Submitting Results");
+        //Debug.Log("Submitting Results");
         EndSimulation();
     }
 
@@ -194,7 +224,7 @@ public class Interface : MonoBehaviour
     // Wipes all faults from the aircraft and resets the simulation board.
     public void Reset()
     {
-        Debug.Log("Resetting Simulation");
+        //Debug.Log("Resetting Simulation");
         ClearSimulation();
     }
 }
